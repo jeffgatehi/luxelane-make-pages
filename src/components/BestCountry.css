@@ -1,0 +1,112 @@
+.bc {
+  background: var(--black);
+  padding: 52px 0 60px;
+}
+
+.bc__inner {
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 0 28px;
+}
+
+.bc__heading {
+  text-align: center;
+  font-size: 20px;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+  color: var(--white);
+  margin-bottom: 28px;
+}
+
+.bc__grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  border: 1px solid rgba(255,255,255,0.07);
+  overflow: hidden;
+}
+
+.bc__col {
+  padding: 24px 22px 28px;
+  border-right: 1px solid rgba(255,255,255,0.07);
+  background: #101010;
+  transition: background 0.25s;
+}
+
+.bc__col:last-child { border-right: none; }
+.bc__col:hover { background: #141414; }
+
+.bc__col-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 16px;
+  padding-bottom: 14px;
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+}
+
+.bc__flag { font-size: 20px; line-height: 1; }
+
+.bc__name {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  color: var(--gold);
+  text-transform: uppercase;
+}
+
+.bc__points {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+}
+
+.bc__points li {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  font-size: 12px;
+  font-weight: 300;
+  color: #aaa;
+  line-height: 1.5;
+}
+
+.bc__arrow {
+  color: var(--gold);
+  font-size: 10px;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.bc__footer {
+  text-align: center;
+  margin-top: 24px;
+}
+
+.bc__view-all {
+  display: inline-block;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  color: var(--white);
+  border: 1px solid rgba(255,255,255,0.2);
+  padding: 11px 28px;
+  transition: border-color 0.25s, color 0.25s;
+}
+
+.bc__view-all:hover {
+  border-color: var(--gold);
+  color: var(--gold);
+}
+
+@media (max-width: 900px) {
+  .bc__grid { grid-template-columns: repeat(2, 1fr); }
+  .bc__col { border-bottom: 1px solid rgba(255,255,255,0.07); }
+  .bc__col:nth-child(2) { border-right: none; }
+  .bc__col:nth-child(4) { border-right: none; }
+}
+@media (max-width: 500px) {
+  .bc__inner { padding: 0 16px; }
+  .bc__grid { grid-template-columns: 1fr; }
+  .bc__col { border-right: none; }
+}
